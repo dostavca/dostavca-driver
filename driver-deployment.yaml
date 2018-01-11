@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - image: zanozbot/dostavca-driver:latest
-        name: dostavca-notifications
+        name: dostavca-driver
         env:
           - name: KUMULUZEE_DISCOVERY_CLUSTER
             value: gcp-kube
@@ -31,7 +31,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: dostavca-packet-driver
+  name: dostavca-driver
 spec:
   type: LoadBalancer
   ports:
